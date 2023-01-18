@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
 
     val car = Car.newBuilder()
         .setMake("Honda")
-        .setModel("Accard")
+        .setModel("Accord")
         .setYear(2020)
         .build()
 
