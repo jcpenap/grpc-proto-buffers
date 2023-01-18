@@ -12,17 +12,25 @@ fun main(args: Array<String>) {
         .setCity("Atlanta")
         .build()
 
-    val car = Car.newBuilder()
+    val accord = Car.newBuilder()
         .setMake("Honda")
         .setModel("Accord")
         .setYear(2020)
+        .build()
+
+    val civic = Car.newBuilder()
+        .setMake("Honda")
+        .setModel("Civic")
+        .setYear(2005)
         .build()
 
     val juan = Person.newBuilder()
         .setName("Juan")
         .setAge(37)
         .setAddress(address)
-        .setCar(car)
+        .addAllCar(
+            listOf(accord, civic)
+        )
         .build()
 
     println(juan)
