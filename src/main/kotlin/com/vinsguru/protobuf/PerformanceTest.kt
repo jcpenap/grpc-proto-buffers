@@ -2,6 +2,7 @@ package com.vinsguru.protobuf
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
+import com.google.protobuf.Int32Value
 import com.vinsguru.json.JPerson
 import com.vinsguru.models.Person
 
@@ -17,7 +18,7 @@ fun main(args: Array<String>) {
     //protobuff
     val sam = Person.newBuilder()
         .setName("sam")
-        .setAge(10)
+        .setAge(Int32Value.newBuilder().setValue(10).build())
         .build()
 
     val proto =  Runnable {

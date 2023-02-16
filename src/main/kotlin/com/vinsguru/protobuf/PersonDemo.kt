@@ -1,5 +1,6 @@
 package com.vinsguru.protobuf
 
+import com.google.protobuf.Int32Value
 import com.vinsguru.models.Person
 import java.io.File
 import java.nio.file.Files
@@ -9,7 +10,7 @@ import kotlin.io.path.writeBytes
 fun main(args: Array<String>) {
     val person = Person.newBuilder()
         .setName("sam")
-        .setAge(10)
+        .setAge(Int32Value.newBuilder().setValue(10).build())
         .build()
     println(person.toString())
 
